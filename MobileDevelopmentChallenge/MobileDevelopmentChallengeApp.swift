@@ -11,7 +11,7 @@ import SwiftUI
 struct MobileDevelopmentChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MovieListView(viewModel: ViewModelFactory(apiClient: APIClient()).createMovieListViewModel())
         }
     }
 }
