@@ -1,0 +1,18 @@
+name: Second Workflow
+on: workflow_dispatch
+jobs:
+  test:
+     runs-on: macos-latest
+     steps:
+        - name: Get Code
+          uses: actions/checkout@v7
+        - name: Select xcode 
+          run: sudo xcode-select -s /Applications/Xcode.app
+        
+        - name: Run Tests
+          run: |
+               xcodebuild test \
+               -scheme MobileDevelopmentChallenge \
+               -destination 'platform=iOS Simulator,name=iPhone 17'
+ 
+        
