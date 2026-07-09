@@ -1,0 +1,10 @@
+name: First Workflow
+on: workflow_dispatch
+jobs:
+  welcome-job:
+        runs-on: macos-latest
+        steps:
+           - name: Welcome Greetings
+             run: echo "Welcome"
+
+  
