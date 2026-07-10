@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07F88B5B2D4A084A00D01DDA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 07F88B5A2D4A084A00D01DDA /* README.md */; };
-		6448B8567F87D73BDA3566BB /* Pods_MobileDevelopmentChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DFE22DCAF20AD00D0A3A6C /* Pods_MobileDevelopmentChallenge.framework */; };
-		8BA06B2176E390923F18341A /* Pods_MobileDevelopmentChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F466A1F66438A0E0BF1718F9 /* Pods_MobileDevelopmentChallengeTests.framework */; };
-		94F9A3E43000D39100EE07C2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 94F9A3E33000D39100EE07C2 /* Kingfisher */; };
-		94F9A5F73000EFF900EE07C2 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 94F9A5F63000EFF900EE07C2 /* SwiftLintFramework */; };
-		94F9A5F93000EFF900EE07C2 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 94F9A5F83000EFF900EE07C2 /* swiftlint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +25,7 @@
 		07F88A842D49F49000D01DDA /* MobileDevelopmentChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDevelopmentChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F88A942D49F49300D01DDA /* MobileDevelopmentChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDevelopmentChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F88B5A2D4A084A00D01DDA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		42DFE22DCAF20AD00D0A3A6C /* Pods_MobileDevelopmentChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDevelopmentChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		460FDE8B77A1C9EB624F9DD6 /* Pods-MobileDevelopmentChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDevelopmentChallenge.release.xcconfig"; path = "Target Support Files/Pods-MobileDevelopmentChallenge/Pods-MobileDevelopmentChallenge.release.xcconfig"; sourceTree = "<group>"; };
-		5EB999DC3F30BBA63EB0ECA8 /* Pods-MobileDevelopmentChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDevelopmentChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-MobileDevelopmentChallengeTests/Pods-MobileDevelopmentChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		94F9A3313000D09200EE07C2 /* MobileDevelopmentChallenge.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MobileDevelopmentChallenge.xctestplan; sourceTree = "<group>"; };
-		E1D1A3DD82FF1114E249DDFD /* Pods-MobileDevelopmentChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDevelopmentChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MobileDevelopmentChallenge/Pods-MobileDevelopmentChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		F466A1F66438A0E0BF1718F9 /* Pods_MobileDevelopmentChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDevelopmentChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB37B1D5019E324DC9F1CFFE /* Pods-MobileDevelopmentChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDevelopmentChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileDevelopmentChallengeTests/Pods-MobileDevelopmentChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -61,10 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F9A3E43000D39100EE07C2 /* Kingfisher in Frameworks */,
-				94F9A5F93000EFF900EE07C2 /* swiftlint in Frameworks */,
-				6448B8567F87D73BDA3566BB /* Pods_MobileDevelopmentChallenge.framework in Frameworks */,
-				94F9A5F73000EFF900EE07C2 /* SwiftLintFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA06B2176E390923F18341A /* Pods_MobileDevelopmentChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +73,6 @@
 				07F88A972D49F49300D01DDA /* MobileDevelopmentChallengeTests */,
 				07F88A852D49F49000D01DDA /* Products */,
 				85C88170B08A9FD7A47C6B4D /* Pods */,
-				4004962E4FC134AE70A37852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,22 +85,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4004962E4FC134AE70A37852 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				42DFE22DCAF20AD00D0A3A6C /* Pods_MobileDevelopmentChallenge.framework */,
-				F466A1F66438A0E0BF1718F9 /* Pods_MobileDevelopmentChallengeTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		85C88170B08A9FD7A47C6B4D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E1D1A3DD82FF1114E249DDFD /* Pods-MobileDevelopmentChallenge.debug.xcconfig */,
-				460FDE8B77A1C9EB624F9DD6 /* Pods-MobileDevelopmentChallenge.release.xcconfig */,
-				FB37B1D5019E324DC9F1CFFE /* Pods-MobileDevelopmentChallengeTests.debug.xcconfig */,
-				5EB999DC3F30BBA63EB0ECA8 /* Pods-MobileDevelopmentChallengeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -129,7 +99,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07F88AA82D49F49300D01DDA /* Build configuration list for PBXNativeTarget "MobileDevelopmentChallenge" */;
 			buildPhases = (
-				4F5C966854546D3655B74421 /* [CP] Check Pods Manifest.lock */,
 				07F88A802D49F49000D01DDA /* Sources */,
 				07F88A812D49F49000D01DDA /* Frameworks */,
 				07F88A822D49F49000D01DDA /* Resources */,
@@ -150,7 +119,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07F88AAB2D49F49300D01DDA /* Build configuration list for PBXNativeTarget "MobileDevelopmentChallengeTests" */;
 			buildPhases = (
-				E69017B8812307629B9B62E9 /* [CP] Check Pods Manifest.lock */,
 				07F88A902D49F49300D01DDA /* Sources */,
 				07F88A912D49F49300D01DDA /* Frameworks */,
 				07F88A922D49F49300D01DDA /* Resources */,
@@ -224,53 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4F5C966854546D3655B74421 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MobileDevelopmentChallenge-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E69017B8812307629B9B62E9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MobileDevelopmentChallengeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07F88A802D49F49000D01DDA /* Sources */ = {
@@ -419,7 +340,6 @@
 		};
 		07F88AA92D49F49300D01DDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1D1A3DD82FF1114E249DDFD /* Pods-MobileDevelopmentChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,7 +369,6 @@
 		};
 		07F88AAA2D49F49300D01DDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 460FDE8B77A1C9EB624F9DD6 /* Pods-MobileDevelopmentChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,7 +398,6 @@
 		};
 		07F88AAC2D49F49300D01DDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB37B1D5019E324DC9F1CFFE /* Pods-MobileDevelopmentChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,7 +417,6 @@
 		};
 		07F88AAD2D49F49300D01DDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EB999DC3F30BBA63EB0ECA8 /* Pods-MobileDevelopmentChallengeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -548,43 +465,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		94F9A3E23000D39100EE07C2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.10.0;
-			};
-		};
-		94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.65.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		94F9A3E33000D39100EE07C2 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 94F9A3E23000D39100EE07C2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		94F9A5F63000EFF900EE07C2 /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
-		};
-		94F9A5F83000EFF900EE07C2 /* swiftlint */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = swiftlint;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07F88A7C2D49F49000D01DDA /* Project object */;
 }
