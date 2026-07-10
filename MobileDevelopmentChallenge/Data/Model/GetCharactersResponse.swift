@@ -13,7 +13,6 @@ struct GetCharactersResponse: Codable {
     let total, limit, offset, page: Int?
     let pages: Int?
     let error: ErrorData?
-    let git: Int?
 }
 
 // MARK: - CharacterData
