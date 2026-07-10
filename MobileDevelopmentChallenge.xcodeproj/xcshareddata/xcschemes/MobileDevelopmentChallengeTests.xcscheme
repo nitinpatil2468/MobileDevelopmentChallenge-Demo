@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1620"
+   LastUpgradeVersion = "2610"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
       <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07F88A832D49F49000D01DDA"
-               BuildableName = "MobileDevelopmentChallenge.app"
-               BlueprintName = "MobileDevelopmentChallenge"
-               ReferencedContainer = "container:MobileDevelopmentChallenge.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -48,6 +34,19 @@
             default = "YES">
          </TestPlanReference>
       </TestPlans>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07F88A932D49F49300D01DDA"
+               BuildableName = "MobileDevelopmentChallengeTests.xctest"
+               BlueprintName = "MobileDevelopmentChallengeTests"
+               ReferencedContainer = "container:MobileDevelopmentChallenge.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -59,16 +58,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07F88A832D49F49000D01DDA"
-            BuildableName = "MobileDevelopmentChallenge.app"
-            BlueprintName = "MobileDevelopmentChallenge"
-            ReferencedContainer = "container:MobileDevelopmentChallenge.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -76,16 +65,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "07F88A832D49F49000D01DDA"
-            BuildableName = "MobileDevelopmentChallenge.app"
-            BlueprintName = "MobileDevelopmentChallenge"
+            BlueprintIdentifier = "07F88A932D49F49300D01DDA"
+            BuildableName = "MobileDevelopmentChallengeTests.xctest"
+            BlueprintName = "MobileDevelopmentChallengeTests"
             ReferencedContainer = "container:MobileDevelopmentChallenge.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "3FD5A6E0-4EC5-48CA-900E-C22835AF31E8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MobileDevelopmentChallenge.xcodeproj",
+        "identifier" : "07F88A932D49F49300D01DDA",
+        "name" : "MobileDevelopmentChallengeTests"
+      }
+    }
+  ],
+  "version" : 1
+}
