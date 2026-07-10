@@ -19,8 +19,11 @@ jobs:
                -workspace MobileDevelopmentChallenge.xcworkspace \
                -scheme MobileDevelopmentChallenge
 
-        - name: Run Lint
-          run:  swiftlint
+        - name: Install SwiftLint
+          run: brew install swiftlint
+
+        - name: Run SwiftLint
+          run: swiftlint
         
         # - name: Run Tests
         #   run: |
@@ -38,6 +41,14 @@ jobs:
 
         - name: Install Pods
           run: pod install
+
+
+        - name: Install SwiftLint
+          run: brew install swiftlint
+
+        - name: Run SwiftLint
+          run: swiftlint
+
 
         - name: Build App
           run: |
