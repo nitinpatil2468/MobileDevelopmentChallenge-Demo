@@ -1,18 +1,51 @@
 name: Second Workflow
-on: workflow_dispatch
+on: [workflow_dispatch,push]
 jobs:
   test:
      runs-on: macos-latest
      steps:
         - name: Get Code
           uses: actions/checkout@v7
+
         - name: Select xcode 
           run: sudo xcode-select -s /Applications/Xcode.app
+
+        - name: Install Pods
+          run: pod install
+
+        - name: Install Packages
+          run: |
+               xcodebuild -resolvePackageDependencies \
+               -workspace MobileDevelopmentChallenge.xcworkspace \
+               -scheme MobileDevelopmentChallenge
         
         - name: Run Tests
           run: |
                xcodebuild test \
                -scheme MobileDevelopmentChallenge \
                -destination 'platform=iOS Simulator,name=iPhone 17'
+
+  build:
+      runs-on: macos-latest
+      needs: test
+      steps:
+        - name: Build App
+          run: |
+               xcodebuild build \.
+               -workspace MobileDevelopmentChallenge.xcworkspace \
+               -scheme MobileDevelopmentChalleng
+        
+        - name: Run Tests
+          run: |
+               xcodebuild test \
+               -scheme MobileDevelopmentChallenge \
+               -destination 'platform=iOS Simulator,name=iPhone 17' 
+
+  deploy:
+      runs-on: macos-latest
+      needs: build
+      steps:
+         - name: Deploy
+           run: echo "Deploying App"
  
         
