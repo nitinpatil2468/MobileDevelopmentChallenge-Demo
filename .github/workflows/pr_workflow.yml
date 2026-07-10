@@ -26,6 +26,7 @@ jobs:
                xcodebuild build \
                -project MobileDevelopmentChallenge.xcodeproj \
                -scheme MobileDevelopmentChallenge \
-               -destination "generic/platform=iOS Simulator"
+               -destination "generic/platform=iOS Simulator" \
+               CODE_SIGNING_ALLOWED=NO
            
 
