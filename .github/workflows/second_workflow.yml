@@ -55,8 +55,9 @@ jobs:
           run: |
                xcodebuild build \
                -workspace MobileDevelopmentChallenge.xcworkspace \
-               -scheme MobileDevelopmentChallenge
-
+               -scheme MobileDevelopmentChallenge \
+               -destination 'platform=iOS Simulator,name=iPhone 17'
+               
   deploy:
       runs-on: macos-latest
       needs: build
