@@ -11,6 +11,8 @@
 		6448B8567F87D73BDA3566BB /* Pods_MobileDevelopmentChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DFE22DCAF20AD00D0A3A6C /* Pods_MobileDevelopmentChallenge.framework */; };
 		8BA06B2176E390923F18341A /* Pods_MobileDevelopmentChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F466A1F66438A0E0BF1718F9 /* Pods_MobileDevelopmentChallengeTests.framework */; };
 		94F9A3E43000D39100EE07C2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 94F9A3E33000D39100EE07C2 /* Kingfisher */; };
+		94F9A5F73000EFF900EE07C2 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 94F9A5F63000EFF900EE07C2 /* SwiftLintFramework */; };
+		94F9A5F93000EFF900EE07C2 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 94F9A5F83000EFF900EE07C2 /* swiftlint */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +42,11 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		07F88A862D49F49000D01DDA /* MobileDevelopmentChallenge */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MobileDevelopmentChallenge;
 			sourceTree = "<group>";
 		};
 		07F88A972D49F49300D01DDA /* MobileDevelopmentChallengeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MobileDevelopmentChallengeTests;
 			sourceTree = "<group>";
 		};
@@ -60,7 +58,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F9A3E43000D39100EE07C2 /* Kingfisher in Frameworks */,
+				94F9A5F93000EFF900EE07C2 /* swiftlint in Frameworks */,
 				6448B8567F87D73BDA3566BB /* Pods_MobileDevelopmentChallenge.framework in Frameworks */,
+				94F9A5F73000EFF900EE07C2 /* SwiftLintFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +195,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				94F9A3E23000D39100EE07C2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 07F88A852D49F49000D01DDA /* Products */;
@@ -256,9 +257,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MobileDevelopmentChallenge/Pods-MobileDevelopmentChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MobileDevelopmentChallenge/Pods-MobileDevelopmentChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -575,6 +580,14 @@
 				minimumVersion = 8.10.0;
 			};
 		};
+		94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.65.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -582,6 +595,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 94F9A3E23000D39100EE07C2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		94F9A5F63000EFF900EE07C2 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		94F9A5F83000EFF900EE07C2 /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94F9A5F53000EFF900EE07C2 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = swiftlint;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
