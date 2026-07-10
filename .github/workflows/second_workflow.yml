@@ -22,6 +22,7 @@ jobs:
         - name: Run Tests
           run: |
                xcodebuild test \
+               -workspace MobileDevelopmentChallenge.xcworkspace \
                -scheme MobileDevelopmentChallenge \
                -destination 'platform=iOS Simulator,name=iPhone 17'
 
@@ -31,15 +32,9 @@ jobs:
       steps:
         - name: Build App
           run: |
-               xcodebuild build \.
+               xcodebuild build \
                -workspace MobileDevelopmentChallenge.xcworkspace \
-               -scheme MobileDevelopmentChalleng
-        
-        - name: Run Tests
-          run: |
-               xcodebuild test \
-               -scheme MobileDevelopmentChallenge \
-               -destination 'platform=iOS Simulator,name=iPhone 17' 
+               -scheme MobileDevelopmentChallenge
 
   deploy:
       runs-on: macos-latest
