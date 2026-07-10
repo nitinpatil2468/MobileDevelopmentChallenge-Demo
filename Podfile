@@ -6,7 +6,6 @@ target 'MobileDevelopmentChallenge' do
   use_frameworks!
 
 
-  pod 'IQKeyboardManagerSwift'
 
   # Pods for MobileDevelopmentChallenge
 
