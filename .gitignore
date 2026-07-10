@@ -1,0 +1,33 @@
+# Xcode
+DerivedData/
+build/
+
+# User-specific Xcode settings
+xcuserdata/
+*.xcuserdatad
+*.xcuserstate
+
+# CocoaPods
+Pods/
+
+# Swift Package Manager
+.build/
+
+# macOS
+.DS_Store
+
+# Fastlane (if used later)
+fastlane/report.xml
+fastlane/screenshots
+fastlane/test_output
+
+# Coverage
+*.xccovarchive
+*.xccovreport
+
+# Archives
+*.xcarchive
+
+# Temporary files
+*.swp
+*.tmp
