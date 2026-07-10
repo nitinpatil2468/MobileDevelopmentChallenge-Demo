@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "317157AA-F628-491B-98FD-0611788E419E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MobileDevelopmentChallenge.xcodeproj",
+        "identifier" : "07F88A932D49F49300D01DDA",
+        "name" : "MobileDevelopmentChallengeTests"
+      }
+    }
+  ],
+  "version" : 1
+}
