@@ -1,0 +1,45 @@
+Command line invocation:
+    /Users/nitin/Downloads/Xcode.app/Contents/Developer/usr/bin/xcodebuild clean build -project MobileDevelopmentChallenge.xcodeproj -scheme MobileDevelopmentChallenge
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+** CLEAN SUCCEEDED **
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'MobileDevelopmentChallengeTests' in project 'MobileDevelopmentChallenge'
+        ➜ Explicit dependency on target 'MobileDevelopmentChallenge' in project 'MobileDevelopmentChallenge'
+    Target 'MobileDevelopmentChallenge' in project 'MobileDevelopmentChallenge' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Users/nitin/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Users/nitin/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.1.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Users/nitin/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Users/nitin/Downloads/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/nitin/Downloads/MobileDevelopmentChallenge -Demo/MobileDevelopmentChallenge/Preview Content/Preview Assets.xcassets /Users/nitin/Downloads/MobileDevelopmentChallenge -Demo/MobileDevelopmentChallenge/Resources/Assets.xcassets
+
+ExecuteExternalTool /Users/nitin/Downloads/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Users/nitin/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: df317600d757a3f75e050cc0e504d2fe
+Build description path: /Users/nitin/Library/Developer/Xcode/DerivedData/MobileDevelopmentChallenge-hbytmwxnrtmfhydwixvcjrlduozq/Build/Intermediates.noindex/XCBuildData/df317600d757a3f75e050cc0e504d2fe.xcbuilddata
+/Users/nitin/Downloads/MobileDevelopmentChallenge -Demo/MobileDevelopmentChallenge.xcodeproj: error: No profiles for 'com.indian.MobileDevelopmentChallenge' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'com.indian.MobileDevelopmentChallenge'. Automatic signing is disabled and unable to generate a profile. To enable automatic signing, pass -allowProvisioningUpdates to xcodebuild. (in target 'MobileDevelopmentChallenge' from project 'MobileDevelopmentChallenge')

@@ -1,0 +1,31 @@
+name: PR Workflow
+on:
+  pull_request:
+        types:
+            - opened
+            - edited
+  push:
+    branches: 
+          - 'dev/*'
+          - 'dev*'
+    paths-ignore:
+          - '.github/*'
+
+jobs:
+   deploy:
+      runs-on: macos-latest
+      steps:
+         - name: Get Code
+           uses: actions/checkout@v7
+
+         - name: Select Xcode
+           run: sudo xcode-select -s /Applications/Xcode.app
+
+         - name: Build App
+           run: |
+               xcodebuild build \
+               -project MobileDevelopmentChallenge.xcodeproj \
+               -scheme MobileDevelopmentChallenge \
+               -destination "generic/platform=iOS Simulator"
+           
+
