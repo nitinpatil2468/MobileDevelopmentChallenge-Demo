@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07F88B5B2D4A084A00D01DDA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 07F88B5A2D4A084A00D01DDA /* README.md */; };
-		94F9A1CF3000C80300EE07C2 /* MobileDevelopmentChallenge.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 94F9A1CE3000C80300EE07C2 /* MobileDevelopmentChallenge.xctestplan */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,8 +25,6 @@
 		07F88A842D49F49000D01DDA /* MobileDevelopmentChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDevelopmentChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F88A942D49F49300D01DDA /* MobileDevelopmentChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDevelopmentChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F88B5A2D4A084A00D01DDA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		94F9A1CE3000C80300EE07C2 /* MobileDevelopmentChallenge.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MobileDevelopmentChallenge.xctestplan; sourceTree = "<group>"; };
-		94F9A2803000CAC100EE07C2 /* MobileDevelopmentChallengeTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MobileDevelopmentChallengeTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -64,8 +61,6 @@
 		07F88A7B2D49F49000D01DDA = {
 			isa = PBXGroup;
 			children = (
-				94F9A2803000CAC100EE07C2 /* MobileDevelopmentChallengeTests.xctestplan */,
-				94F9A1CE3000C80300EE07C2 /* MobileDevelopmentChallenge.xctestplan */,
 				07994F842D4A498000A45CD0 /* MobileDevelopmentChallenge.xctestplan */,
 				07F88B5A2D4A084A00D01DDA /* README.md */,
 				07F88A862D49F49000D01DDA /* MobileDevelopmentChallenge */,
@@ -139,7 +134,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 2610;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					07F88A832D49F49000D01DDA = {
 						CreatedOnToolsVersion = 16.2;
@@ -176,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F88B5B2D4A084A00D01DDA /* README.md in Resources */,
-				94F9A1CF3000C80300EE07C2 /* MobileDevelopmentChallenge.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +244,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = L54DZDP7Z3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -274,7 +267,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -315,7 +307,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = L54DZDP7Z3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -332,7 +323,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -346,6 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MobileDevelopmentChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = L54DZDP7Z3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -374,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MobileDevelopmentChallenge/Preview Content\"";
+				DEVELOPMENT_TEAM = L54DZDP7Z3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -400,6 +392,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54DZDP7Z3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -418,6 +411,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L54DZDP7Z3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;

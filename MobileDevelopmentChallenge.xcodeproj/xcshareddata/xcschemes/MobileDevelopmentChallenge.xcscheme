@@ -33,9 +33,6 @@
             reference = "container:../MobileDevelopmentChallenge.xctestplan"
             default = "YES">
          </TestPlanReference>
-         <TestPlanReference
-            reference = "container:MobileDevelopmentChallenge.xctestplan">
-         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
