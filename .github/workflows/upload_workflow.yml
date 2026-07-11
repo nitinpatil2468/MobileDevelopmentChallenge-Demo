@@ -55,11 +55,11 @@ jobs:
       #       -exportPath ${{ github.workspace }}/build \
       #       -exportOptionsPlist ${{ github.workspace }}/ExportOptions.plist 
 
-      # - name: Upload IPA
-      #   uses: actions/upload-artifact@v7
-      #   with:
-      #     name: MobileDevelopmentChallenge.ipa
-      #     path: ${{ github.workspace }}/build/MobileDevelopmentChallenge.ipa
+      - name: Upload IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: MobileDevelopmentChallenge.ipa
+          path: ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive
 
       
 
