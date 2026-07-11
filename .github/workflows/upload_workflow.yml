@@ -18,6 +18,13 @@ jobs:
             -workspace MobileDevelopmentChallenge.xcworkspace \
             -scheme MobileDevelopmentChallenge
 
+      - name: Run Tests
+        run: |
+            xcodebuild test \
+            -workspace MobileDevelopmentChallenge.xcworkspace \
+            -scheme MobileDevelopmentChallenge \
+            -destination 'platform=iOS Simulator,name=iPhone 17'
+
       - name: Build App
         run: |
             xcodebuild build \
