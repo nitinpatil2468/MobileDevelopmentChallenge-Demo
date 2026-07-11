@@ -43,18 +43,23 @@ jobs:
             CODE_SIGNING_ALLOWED=NO
             echo "IPA build completed successfully. ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive"
 
-      - name: Export IPA
-        run: |
-            xcodebuild -exportArchive \
-            -archivePath ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive \
-            -exportPath ${{ github.workspace }}/build \
-            -exportOptionsPlist ${{ github.workspace }}/ExportOptions.plist 
 
-      - name: Upload IPA
-        uses: actions/upload-artifact@v7
-        with:
-          name: MobileDevelopmentChallenge.ipa
-          path: ${{ github.workspace }}/build/MobileDevelopmentChallenge.ipa
+      - name: Show Build Files
+        run: |
+            find ${{ github.workspace }}/build
+
+      # - name: Export IPA
+      #   run: |
+      #       xcodebuild -exportArchive \
+      #       -archivePath ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive \
+      #       -exportPath ${{ github.workspace }}/build \
+      #       -exportOptionsPlist ${{ github.workspace }}/ExportOptions.plist 
+
+      # - name: Upload IPA
+      #   uses: actions/upload-artifact@v7
+      #   with:
+      #     name: MobileDevelopmentChallenge.ipa
+      #     path: ${{ github.workspace }}/build/MobileDevelopmentChallenge.ipa
 
       
 
