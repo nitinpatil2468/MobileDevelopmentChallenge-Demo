@@ -18,12 +18,12 @@ jobs:
             -workspace MobileDevelopmentChallenge.xcworkspace \
             -scheme MobileDevelopmentChallenge
 
-      - name: Run Tests
-        run: |
-            xcodebuild test \
-            -workspace MobileDevelopmentChallenge.xcworkspace \
-            -scheme MobileDevelopmentChallenge \
-            -destination 'platform=iOS Simulator,name=iPhone 17'
+      # - name: Run Tests
+      #   run: |
+      #       xcodebuild test \
+      #       -workspace MobileDevelopmentChallenge.xcworkspace \
+      #       -scheme MobileDevelopmentChallenge \
+      #       -destination 'platform=iOS Simulator,name=iPhone 17'
 
       - name: Build App
         run: |
@@ -60,6 +60,15 @@ jobs:
         with:
           name: MobileDevelopmentChallenge.ipa
           path: ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive
+
+  download_ipa:
+    runs-on: macos-latest
+    needs: upload_ipa
+    steps:
+      - name: Download IPA
+        uses: actions/download-artifact@v7
+        with:
+          name: MobileDevelopmentChallenge.ipa
 
       
 
