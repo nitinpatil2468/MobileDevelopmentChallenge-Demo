@@ -5,6 +5,8 @@ on:
 jobs:
   upload_ipa:
     runs-on: macos-latest
+    outputs:
+      ipa_path: ${{ steps.publish_ipa.outputs.ipa_path }}
     steps:
       - name: Get Code  
         uses: actions/checkout@v7       
@@ -44,6 +46,11 @@ jobs:
             echo "IPA build completed successfully. ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive"
 
 
+      - name: Publish IPA path
+        id: publish_ipa
+        run: echo "ipa_path=${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive" >> $GITHUB_OUTPUT
+
+
       - name: Show Build Files
         run: |
             find ${{ github.workspace }}/build
@@ -69,6 +76,11 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: MobileDevelopmentChallenge.ipa
+
+      - name: Get oututs
+        run: echo "${{ needs.upload_ipa.outputs.ipa_path }}"
+
+      
 
       
 
