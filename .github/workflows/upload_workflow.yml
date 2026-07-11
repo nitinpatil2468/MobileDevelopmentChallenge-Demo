@@ -1,0 +1,57 @@
+name: Upload IPA Workflow
+on: 
+  push:
+    branches: 'dev'
+jobs:
+  upload_ipa:
+    runs-on: macos-latest
+    steps:
+      - name: Get Code  
+        uses: actions/checkout@v7       
+      
+      - name: Select xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Install dependencies
+        run: |
+            xcodebuild -resolvePackageDependencies \
+            -workspace MobileDevelopmentChallenge.xcworkspace \
+            -scheme MobileDevelopmentChallenge
+
+      - name: Build App
+        run: |
+            xcodebuild build \
+            -workspace MobileDevelopmentChallenge.xcworkspace \
+            -scheme MobileDevelopmentChallenge \
+            -sdk iphonesimulator \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build IPA
+        run: |
+            xcodebuild archive \
+            -workspace MobileDevelopmentChallenge.xcworkspace \
+            -scheme MobileDevelopmentChallenge \
+            -archivePath ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive \
+            -sdk iphoneos \
+            CODE_SIGNING_ALLOWED=NO
+            echo "IPA build completed successfully. ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive"
+
+      - name: Export IPA
+        run: |
+            xcodebuild -exportArchive \
+            -archivePath ${{ github.workspace }}/build/MobileDevelopmentChallenge.xcarchive \
+            -exportPath ${{ github.workspace }}/build \
+            -exportOptionsPlist ${{ github.workspace }}/ExportOptions.plist 
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: MobileDevelopmentChallenge.ipa
+          path: ${{ github.workspace }}/build/MobileDevelopmentChallenge.ipa
+
+      
+
+
+       
+
+

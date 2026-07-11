@@ -1,7 +1,7 @@
 name: Cache Workflow
 on:
   push:
-    branches: 'dev'
+    branches: 'main'
 
 jobs:
    build_app:
