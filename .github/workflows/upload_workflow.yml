@@ -1,7 +1,8 @@
 name: Upload IPA Workflow
 on: 
   push:
-    branches: 'dev'
+    branches:
+      - 'main'
 jobs:
   upload_ipa:
     runs-on: macos-latest
