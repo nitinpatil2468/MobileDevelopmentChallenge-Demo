@@ -30,25 +30,26 @@ platform :ios do
   end
 
   lane :build do
+    setup_ci if is_ci
+
     build_app(
       scheme: "MobileDevelopmentChallenge",
+      workspace: "MobileDevelopmentChallenge.xcworkspace",
+      configuration: "Debug",
       export_method: "development",
       output_directory: "./build",
       output_name: "MobileDevelopmentChallenge.ipa",
-      skip_codesigning: true,
-      skip_package_ipa: true
+      skip_package_ipa: false,
+      skip_codesigning: false
     )
 
+    ipa_path = "#{Dir.pwd}/build/MobileDevelopmentChallenge.ipa"
 
-    archive_path = lane_context[SharedValues::XCODEBUILD_ARCHIVE]
+    UI.success("IPA created at:")
+    UI.message(ipa_path)
 
-    UI.success("Archive created at:")
-    UI.message(archive_path)
-
-    # Old way: set environment variable for later steps in same job
-   sh("echo 'archive_path=#{archive_path}' >> $GITHUB_OUTPUT") if ENV["GITHUB_OUTPUT"]
+    sh("echo 'archive_path=#{ipa_path}' >> $GITHUB_OUTPUT") if ENV["GITHUB_OUTPUT"]
   end
-
 
   lane :custom_lane do
 
