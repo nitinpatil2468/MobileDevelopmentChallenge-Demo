@@ -38,6 +38,15 @@ platform :ios do
       skip_codesigning: true,
       skip_package_ipa: true
     )
+
+
+    archive_path = lane_context[SharedValues::XCODEBUILD_ARCHIVE]
+
+    UI.success("Archive created at:")
+    UI.message(archive_path)
+
+    sh("echo 'ARCHIVE_PATH=#{archive_path}' >> $GITHUB_ENV") if ENV["GITHUB_ENV"]
+
   end
 
 
