@@ -1,0 +1,55 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+
+  lane :home do
+    puts "This is the home lane"
+  end
+
+  lane :test do
+    run_tests(
+      scheme: "MobileDevelopmentChallenge",
+      devices: ["iPhone 17"]
+    )
+  end
+
+  lane :build do
+    build_app(
+      scheme: "MobileDevelopmentChallenge",
+      export_method: "development",
+      output_directory: "./build",
+      output_name: "MobileDevelopmentChallenge.ipa"
+    )
+  end
+
+
+  lane :custom_lane do
+
+
+  UI.message("Starting CI Pipeline")
+
+    home
+    test
+    build
+
+  UI.success("CI Pipeline completed successfully")
+  clear
+  
+  end
+end

@@ -1,0 +1,42 @@
+name: FastLane Demo Workflow
+on:
+  push:
+    branches: 
+        - 'dev'
+jobs:
+    fastlane_demo:
+        runs-on: macos-latest
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v7
+
+            - name: Select Xcode
+              run: sudo xcode-select -s /Applications/Xcode.app
+
+            - name: Install Fastlane
+              run: sudo gem install fastlane
+
+            - name: Run Fastlane Demo
+              run: bundle exec fastlane ios custom_lane
+
+    upload_ipa:
+        runs-on: macos-latest
+        needs: fastlane_demo
+        steps:
+            - name: Upload IPA Artifact
+              uses: actions/upload-artifact@v7   
+              with:
+                name: MobileDevelopmentChallenge-IPA
+                path: build/MobileDevelopmentChallenge.ipa     
+
+    download_ipa:
+         runs-on: macos-latest
+         needs: upload_ipa
+         steps:
+             - name: Download IPA
+               uses: actions/download-artifact@v7
+               with:
+                name: MobileDevelopmentChallenge-IPA
+
+
+        
