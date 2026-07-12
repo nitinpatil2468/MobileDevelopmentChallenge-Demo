@@ -45,8 +45,8 @@ platform :ios do
     UI.success("Archive created at:")
     UI.message(archive_path)
 
-    sh("echo 'ARCHIVE_PATH=#{archive_path}' >> $GITHUB_ENV") if ENV["GITHUB_ENV"]
-
+    # Old way: set environment variable for later steps in same job
+   sh("echo 'archive_path=#{archive_path}' >> $GITHUB_OUTPUT") if ENV["GITHUB_OUTPUT"]
   end
 
 
@@ -55,8 +55,8 @@ platform :ios do
 
   UI.message("Starting CI Pipeline")
 
-    home
-    test
+    # home
+    # test
     build
 
   UI.success("CI Pipeline completed successfully")

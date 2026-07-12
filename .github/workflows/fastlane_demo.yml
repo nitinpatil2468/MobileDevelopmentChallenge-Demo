@@ -6,6 +6,8 @@ on:
 jobs:
     fastlane_demo:
         runs-on: macos-latest
+        outputs:
+         archive_path: ${{ steps.fastlane.outputs.archive_path }}
         steps:
             - name: Get Code
               uses: actions/checkout@v7
@@ -21,16 +23,13 @@ jobs:
                 working-directory: ./
 
             - name: Run Fastlane Demo
+              id: fastlane
               run: bundle exec fastlane ios custom_lane
 
-            - name: Print Archive Path
-              run: echo $ARCHIVE_PATH
-
-            - name: Upload Archive
-              uses: actions/upload-artifact@v4
-              with:
-                name: ios-archive
-                path: ${{ env.ARCHIVE_PATH }}
+            - name: Use archive path
+              run: |
+                echo "Archive path: ${{ steps.fastlane.outputs.archive_path }}"
+                ls -lh "${{ steps.fastlane.outputs.archive_path }}"
 
 
     upload_ipa:
@@ -40,8 +39,8 @@ jobs:
             - name: Upload IPA Artifact
               uses: actions/upload-artifact@v7   
               with:
-                name: MobileDevelopmentChallenge-IPA
-                path: build/MobileDevelopmentChallenge.ipa     
+                name: ios-archive
+                path: ${{ needs.fastlane_demo.outputs.archive_path }} 
 
     download_ipa:
          runs-on: macos-latest
@@ -50,7 +49,9 @@ jobs:
              - name: Download IPA
                uses: actions/download-artifact@v7
                with:
-                name: MobileDevelopmentChallenge-IPA
+                name: ios-archive
+             - name: List downloaded files
+               run: ls -lh
 
 
         
