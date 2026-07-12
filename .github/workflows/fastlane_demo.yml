@@ -1,0 +1,60 @@
+name: FastLane Demo Workflow
+on:
+  push:
+    branches: 
+        - 'dev'
+jobs:
+    fastlane_demo:
+        runs-on: macos-latest
+        outputs:
+         archive_path: ${{ steps.fastlane.outputs.archive_path }}
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v7
+
+            - name: Select Xcode
+              run: sudo xcode-select -s /Applications/Xcode.app
+
+            - name: Setup Fastlane
+              uses: ruby/setup-ruby@v1
+              with:
+                bundler-cache: true
+                ruby-version: 3.2.2
+                working-directory: ./
+
+            - name: Run Fastlane Demo
+              id: fastlane
+              env:
+                FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+                FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+              run: bundle exec fastlane ios custom_lane
+
+            - name: Use archive path
+              run: |
+                echo "Archive path: ${{ steps.fastlane.outputs.archive_path }}"
+                ls -lh "${{ steps.fastlane.outputs.archive_path }}"
+
+
+    upload_ipa:
+        runs-on: macos-latest
+        needs: fastlane_demo
+        steps:
+            - name: Upload IPA Artifact
+              uses: actions/upload-artifact@v7   
+              with:
+                name: ios-archive
+                path: ${{ needs.fastlane_demo.outputs.archive_path }} 
+
+    download_ipa:
+         runs-on: macos-latest
+         needs: upload_ipa
+         steps:
+             - name: Download IPA
+               uses: actions/download-artifact@v7
+               with:
+                name: ios-archive
+             - name: List downloaded files
+               run: ls -lh
+
+
+

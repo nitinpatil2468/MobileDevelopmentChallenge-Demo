@@ -1,0 +1,20 @@
+name: Environment Workflow
+env:
+  app_name: "MobileDevelopmentChallenge"
+on:
+  push:
+    branches: 
+        - 'main'
+
+jobs:        
+   get_env:
+      runs-on: macos-latest
+      env:
+        gh_db_name: ${{ vars.GH_DB_NAME }}
+        gh_db_password: ${{ secrets.GH_DB_PASSWORD }}
+      steps:
+      - name: Get env variables
+        run: |
+            echo "GH_DB_NAME=${{ env.gh_db_name }}"
+            echo "app_name=${{ env.app_name }}"
+            echo "GH_DB_PASSWORD=${{ env.gh_db_password }}"
