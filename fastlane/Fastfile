@@ -34,7 +34,8 @@ platform :ios do
       scheme: "MobileDevelopmentChallenge",
       export_method: "development",
       output_directory: "./build",
-      output_name: "MobileDevelopmentChallenge.ipa"
+      output_name: "MobileDevelopmentChallenge.ipa",
+      skip_codesigning: true
     )
   end
 
@@ -50,6 +51,6 @@ platform :ios do
 
   UI.success("CI Pipeline completed successfully")
   clear
-  
+
   end
 end
